@@ -1,0 +1,22 @@
+{
+  "name": "phonecatapp",
+  "authors": [
+    "Daniel Choi <dhrchoi@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "^1.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}
