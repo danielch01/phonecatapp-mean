@@ -10,3 +10,7 @@ List of Bower packages:
 List of NPM packages:
 
 `npm install --save express body-parser mongoose ejs`
+
+List of things to do:
+- Deploy app to Heroku
+- Party
