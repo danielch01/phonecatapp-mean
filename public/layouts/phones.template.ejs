@@ -1,0 +1,64 @@
+<!-- 
+<div ng-repeat="phone in phonelist">
+	<p>{{phone.name}}</p>
+	<p>{{phone.snippet}}</p>
+</div> -->
+
+<style type="text/css">
+
+.well{
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.left{
+	float: left;
+	width: 30%;
+}
+
+.right{
+	width: 70%;
+	float: right;
+}
+
+
+.contain .left img{
+	height: auto;
+	width: 100px;
+	margin-left: 2em;
+}
+
+
+</style>
+
+
+<a href="/">Home</a>
+<div class="row">
+	<div class="col-lg-4 col-md-4">
+		<form>
+			<div class="form-group">
+				<label>Search:</label>
+				<input type="text" ng-model="search.name" class="form-control">
+				<label>Sort by:</label>
+				<select class="form-control" ng-model="orderProp">
+					<option value="name">Alphabetical</option>
+					<option value="age">Age</option>
+				</select>
+			</div>
+		</form>
+	</div>
+	<div class="col-lg-8 col-md-8">
+		<div ng-repeat="phone in phonelist | filter:search | orderBy:orderProp">
+			<div class="well contain">
+				<div class="box left">
+					<!-- Remember to use ng-src rather than src in bringing up image -->
+					<img ng-src="{{phone.imageUrl}}">
+				</div>
+				<div class="box right">
+					<h3>{{phone.name}}</h3>
+					<p>{{phone.snippet}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
