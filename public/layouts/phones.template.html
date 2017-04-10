@@ -31,8 +31,6 @@
 
 </style>
 
-
-<a href="/">Home</a>
 <div class="row">
 	<div class="col-lg-4 col-md-4">
 		<form>
@@ -55,7 +53,7 @@
 					<img ng-src="{{phone.imageUrl}}">
 				</div>
 				<div class="box right">
-					<h3>{{phone.name}}</h3>
+					<h3><a ui-sref="phone-detail({phoneId: phone.id})" ui-sref-active="active">{{phone.name}}</a></h3>
 					<p>{{phone.snippet}}</p>
 				</div>
 			</div>

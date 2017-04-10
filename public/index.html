@@ -19,9 +19,15 @@
 <body ng-app="PhoneCat">
 
 <div class="container">
-	<h1><%= title %></h1>
-	<a ui-sref="phones" ui-sref-active="active">Phones</a>
-	<ui-view></ui-view>
+	<img src="img/logo.png" style="height: 80px; width: auto; padding: 1em">
+	<nav class="navbar navbar-default">
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="phones">Phones</a></li>
+		</ul>
+	</nav>
+
+	<ui-view autoscroll="true"></ui-view>
 
 </div>
 

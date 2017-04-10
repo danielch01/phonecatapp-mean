@@ -14,3 +14,5 @@ List of NPM packages:
 List of things to do:
 - Deploy app to Heroku
 - Party
+
+**04/09/17:** In my next iteration, I must use components instead of templates and controllers in states

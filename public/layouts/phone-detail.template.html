@@ -1,0 +1,104 @@
+<!-- Phone Detail page -->
+<style type="text/css">
+#container{
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#container h1{
+	text-align: center;
+}
+
+#left{
+	width: 30%;
+	float: left;
+	overflow: hidden;
+}
+
+#right{
+	width: 70%;
+	float: left;
+	overflow: hidden;
+}
+
+#mainImg{
+	width: 100%;
+	height: auto;
+}
+
+.pic-group{
+	margin-top: 2em;
+	margin-left: 2em;
+	width: 20%;
+}
+
+.phone-pics{
+	width: 100%;
+	height: auto;
+	border: 1px solid;
+	padding: .5em;
+}
+
+#desc{
+	margin-top: 5em;
+}
+</style>
+
+<div id="container">
+	<div id="left">
+		<img ng-src="{{phone.imageUrl}}">
+	</div>
+	<div id="right">
+		<h1>{{phone.name}}</h1>
+		<hr>
+		<p>{{phone.detail.description}}</p>
+		<div class="col-md-4 col-lg-4 col-sm-4 pic-group" ng-repeat="pics in phone.detail.images | limitTo: 4">
+			<img ng-src="{{pics}}" class="phone-pics">
+		</div>
+	</div>
+</div>
+
+<div id="desc">
+	<ul class="list-group">
+		<li class="list-group-item">
+			<h3>Hardware</h3>
+			<h4>Audio</h4>
+			<p>{{phone.detail.hardware.audioJack}}</p>
+			<h4>CPU</h4>
+			<p>{{phone.detail.hardware.cpu}}</p>
+			<h4>USB</h4>
+			<p>{{phone.detail.hardware.usb}}</p>
+			<h4>Camera</h4>
+			<p>{{phone.detail.camera.primary}}</p>
+		</li>
+		<li class="list-group-item">
+			<h3>Battery</h3>
+			<h4>Stand-by Time</h4>
+			<p>{{phone.detail.battery.standbyTime}}</p>
+			<h4>Talk Time</h4>
+			<p>{{phone.detail.battery.talk}}</p>
+		</li>
+		<li class="list-group-item">
+			<h3>Storage and Memory</h3>
+			<h4>Internal Memory</h4>
+			<p>{{phone.detail.storage.flash}}</p>
+			<h4>RAM</h4>
+			<p>{{phone.detail.storage.ram}}</p>
+		</li>
+		<li class="list-group-item">
+			<h3>Connectivity</h3>
+			<h4>Bluetooth</h4>
+			<p>{{phone.detail.connectivity.bluetooth}}</p>
+			<h4>WiFi</h4>
+			<p>{{phone.detail.connectivity.wifi}}</p>
+		</li>
+		<li class="list-group-item">
+			<h3>Android</h3>
+			<h4>OS Version</h4>
+			<p>{{phone.detail.android.os}}</p>
+			<h4>UI</h4>
+			<p>{{phone.detail.android.ui}}</p>
+		</li>
+	</ul>
+</div>
